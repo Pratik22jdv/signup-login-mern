@@ -5,12 +5,9 @@ const UserSchema = new mongoose.Schema(
     employeeid: {
         type: String,
     },
-    firstname: {
+    fullname: {
         type: String,
         require: true
-    },
-    lastname: {
-        type: String,
     },
     dob: {
         type: String,

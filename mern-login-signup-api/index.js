@@ -47,8 +47,8 @@ app.use(cors(corsOptions)) // Use this after the variable declaration
 
 app.post("/login",  async (req, res) => {
   try {
-    console.log(req.body.email);
-    const user = await e111915094_Employee_Detail.findOne({ email: req.body.email });
+    //console.log(req.body.email);
+    const user = await e111915094_Employee_Detail.findOne({ employeeid: req.body.eid });
     !user && res.status(404).json("user not found");
 
     const validPassword = await compare(req.body.password, user.password)
@@ -64,8 +64,9 @@ app.post("/register", async (req, res) => {
   try {
     //create new user
     const newUser = new e111915094_Employee_Detail({
-      firstname: req.body.fullname,
-      contact: req.body.email,
+      employeeid: req.body.eid,
+      contact: req.body.contact,
+      dob: req.dob,
       password: req.body.password,
     });
 

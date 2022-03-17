@@ -13,14 +13,14 @@ function Profile() {
     <div style={{margin: "20px"}}>
     <div style={{border:"2px solid black"}}>
     <div style={{margin: "20px"}}>
-    <bold>Name</bold>: Pratik Jadhav <br/>
-    Employee Id: 1001<br/>
-    DOB: 02-08-2000<br/>
-    Contact: 987654321<br/>
-    Job Role: Software Developer<br/>
-    Salary (Monthly): $7000<br/>
-    Yearly Bonus: $200<br/>
-    Total Salary: $84200
+    <bold>Name</bold>: {user.name} <br/>
+    Employee Id: {user.employeeid}<br/>
+    DOB: {user.dob}<br/>
+    Contact: {user.contact}<br/>
+    Job Role: {user.jobRole}<br/>
+    Salary (Monthly): ${user.monthly_salary}<br/>
+    Yearly Bonus: ${user.yearly_bonus}<br/>
+    Total Salary: ${user.monthly_salary*12+user.yearly_bonus}
 </div>
 </div>
     </div>
